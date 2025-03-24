@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: kafka-consumer
+  namespace: kafka
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: kafka-consumer
+  template:
+    metadata:
+      labels:
+        app: kafka-consumer
+    spec:
+      imagePullSecrets:
+        - name: my-gar1-secret
+      containers:
+        - name: kafka-consumer
+          image: us-central1-docker.pkg.dev/burner-keskumar5/kafka-repo/kafka-consumer:v1
+          ports:
+            - containerPort: 8080
