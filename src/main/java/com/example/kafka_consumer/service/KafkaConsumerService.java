@@ -2,7 +2,6 @@ package com.example.kafka_consumer.service;
 
 
 import com.example.kafka_consumer.model.MessageDetails;
-import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.MediaType;
@@ -14,7 +13,6 @@ import reactor.core.publisher.Mono;
 import java.util.Map;
 
 @Service
-@RequiredArgsConstructor
 public class KafkaConsumerService {
 
     private final WebClient.Builder webClientBuilder;

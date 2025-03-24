@@ -2,7 +2,6 @@ package com.example.kafka_consumer.controller;
 
 import com.example.kafka_consumer.model.MessageDetails;
 import com.example.kafka_consumer.service.KafkaConsumerService;
-import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -12,7 +11,6 @@ import reactor.core.publisher.Mono;
 
 @RestController
 @RequestMapping("/consume")
-@RequiredArgsConstructor
 public class KafkaConsumerController {
 
     private final KafkaConsumerService kafkaConsumerService;
